@@ -51,6 +51,15 @@ def demo(opt):
       for stat in time_stats:
         time_str = time_str + '{} {:.3f}s |'.format(stat, ret[stat])
       print(time_str)
+
+      # from utils.debugger import Debugger
+      # debugger = Debugger(dataset=detector.opt.dataset, ipynb=(detector.opt.debug==3),
+      #               theme=detector.opt.debugger_theme)
+      # image = cv2.imread(image_name)
+      # detector.show_results(debugger, image, ret["results"])
+      # from IPython import embed;embed()
+
+
 if __name__ == '__main__':
   opt = opts().init()
   demo(opt)
